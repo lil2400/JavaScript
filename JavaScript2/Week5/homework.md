@@ -3,67 +3,37 @@
 ## So why this homework?
 We want you to realise that functions are just variables in javascript. It is exactly the same as string or a number. This homework forces you into using functions in weird ways that forces you to think differently about functions. 
 
-### Step 1
-1. We learned a little bit about callbacks in JS. A callback is simply a function passed to another function that gets executed (run) after a potentially long running operation has completed. There is another function called `setTimeout` that will wait a specified period of time and then execute a function. For example: 
 
-```js
-function doIt() {
-    console.log('I am done');
-}
-setTimeout(doIt, 5000)
-```
-If you run the above code it will wait 5 seconds and print `I am done`. Please read something about setTimeout on MDN. The first argument to the `setTimeout` function is the callback (`doIt`)
+## Warmup
 
-You must write a function that takes 4 arguments.
-- A start value 
-- An end value
-- A callback to call if the number is divisible by 3 
-- A callback to use if the number is divisible by 5
+The warmup is a little abstract, it will get more concrete later on!
 
-The function should generate an array containing values from start value to end value (inclusive). 
+1. Log out the text `Called after 2.5 seconds` after 2.5 seconds 
+1. Create a function that takes 2 parameters: `timeToWait` and `stringToLog`. Calling this function should log out the `stringToLog` after `timeToWait` seconds. Call the function you have created with some different arguments. 
+1. Create a button in html. When clicking this button, use the function you created in the previous task to log out the text: `3.5 seconds after button is clicked` 3.5 seconds after the button is clicked.
+1. Create two functions and assign them to two variables. One function logs out `Hello World`, the other function logs out `Hello Universe`. Now create a new function (outer) that has one parameter: `logFunction`. The only thing this new function should do is call the provided parameter function. Try call the outer function with different arguments, once with the `hello world` function and once with the `Hello universe` function.
+1. Create a button with the text called "Log location". When this button is clicked the location (latitude, longitude) on the user should be logged out using this [browser api](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API) 
+1. *Optional* Now show that location on a map using fx the [Google maps api]( https://developers.google.com/maps/documentation/javascript/tutorial)
+1. Create a function called `runAfterDelay`. It has two parameters: `delay` and `callback`. When called the function should wait `delay` seconds and then call the provided callback function. Try and call this function with different delays and different callback functions
+1. Check if we have double clicked on the page. A double click is defined by two clicks within 0.5 seconds. 
+1. Create a function called `jokeCreator` that has three parameters: `shouldTellFunnyJoke`, `logFunnyJoke` and `logBadJoke`. If you set `tellFunnyJoke` to `true` it should call the `logFunnyJoke` that should log out a funny joke. And vice versa.
 
-Then the function should iterate over the array and call the second argument if the array value is divisible by 3
+### Function as a variable
+Create funtions that are used in these different ways:
 
-The function should call the second argument if the array value is divisible by 5 
-
-Both functions should be called if the array value is divisible by both 3 and 5
-
-```js
-THIS IS FAKE CODE 
-function threeFive(startIndex, stopIndex, threeCallback, fiveCallback) {
-    // make array 
-    // loop through the array. Check if you should call threeCallback and/or fiveCallback.
-}
-threeFive(10, 15, sayThree, sayFive);
-
-// Should create an array [10,11,12,13,14,15]
-// and call sayFive, sayThree, sayThree, sayFive  - please make sure you see why these calls are made before you start coding
-```
-
-5. We did some work with arrays - `let arr = [1,2,3]`
-We can also nest arrays inside arrays like this `let arr2d = [[1,2], [3,4], [5,6]]` (for math people you can think of this as a matrix)
-How would you print all the items of an array with 3 dimensions? 
-How about with K dimensions? 
-What if you didn't know how deep the array was nested? (You don't have to write code for this but think about it)
-
-
-### Step 2
-
-1) Create a new website with external js file
-
-2) Add a button (e.g. 'click me') that when clicked `console.logs` 'you clicked me!'
-
-3) Add an input element where you can write numbers. When the button is clicked, get the number from the input element. Use the `threeFive` function we created earlier. If the number if divisible with 3 set the background color to blue (using a function you call `threeFive` with). If the number is divisible with 5 set the background color to yellow.
-
-4) Create a button with the text called show location. When this button is clicked the location on the user should be found using this browser api: https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API
-Now show that location on a map using fx the Google maps api: https://developers.google.com/maps/documentation/javascript/tutorial
-
-5) Create funtions that are used in these different ways:
 - Create an array with 3 items. All items should be functions. Go through the array and call them.
-- Create a function as a const and try creating a function normally. Call both function. 
-- Create an object that has a key whose value is a function. Try calling this function. 
-- Create two setTimeouts one uses a function that is defined as a const. The other uses an anonomous function that is defined inside the setTimeout. 
+- Create a function as a const and try creating a function normally. Call both function.
+- Create an object that has a key whose value is a function. Try calling this function.
+- Create two setTimeouts one uses a function that is defined as a const. The other uses an anonomous function that is defined inside the setTimeout.
 - Create a function (outer) that returns a function (inner). Call the outer function and assign the return to a variable. Now call this variable (that is the inner function)
+
+
+Create a game where there are two buttons. The one that clicks most in a minute wins
+
+## The fastest presser in this realm
+
+
+In the [homework/hyf-bay folder](homework/hyf-bay) there is a project you should continue working on. So copy all the files into your hyf-homework/Javascript/javascript2/week3 folder and start working in the main.js file. 
 
 ## Feedback giving time!
 Find a student to give feedback using this site: https://hyf-peer-review.herokuapp.com/
